@@ -1,0 +1,91 @@
+{
+  "name": "soil_moisture_forecast",
+  "algorithm": "LinearRegression (scikit-learn), target = perubahan kelembapan H jam ke depan",
+  "trained_at": "2026-11-13T13:22:40+07:00",
+  "data_until": "2026-11-12 01:00:00",
+  "resample": "10min",
+  "features": [
+    "soil_now",
+    "soil_diff_1h",
+    "soil_diff_3h",
+    "soil_diff_6h",
+    "soil_diff_12h",
+    "soil_diff_24h"
+  ],
+  "dry_threshold": 55,
+  "horizons": {
+    "1": {
+      "intercept": -0.9406782337989263,
+      "coef": {
+        "soil_now": 0.008189360018512587,
+        "soil_diff_1h": -0.20575567431318634,
+        "soil_diff_3h": -0.022275980160574763,
+        "soil_diff_6h": -6.884845081155027e-05,
+        "soil_diff_12h": -0.00426262616688678,
+        "soil_diff_24h": -0.0034747449396802903
+      },
+      "sigma": 0.42900786635726595,
+      "n_train": 1734
+    },
+    "3": {
+      "intercept": -2.6444753923484523,
+      "coef": {
+        "soil_now": 0.02342907394601396,
+        "soil_diff_1h": -0.29366389702170687,
+        "soil_diff_3h": -0.03914911625226545,
+        "soil_diff_6h": 0.007184300890221746,
+        "soil_diff_12h": -0.0213815132183418,
+        "soil_diff_24h": -0.013598599496834587
+      },
+      "sigma": 0.6866103645852295,
+      "n_train": 1696
+    },
+    "6": {
+      "intercept": -5.430294234770613,
+      "coef": {
+        "soil_now": 0.049315978814702614,
+        "soil_diff_1h": -0.22021656036749582,
+        "soil_diff_3h": -0.19947923092514888,
+        "soil_diff_6h": 0.031936663360636525,
+        "soil_diff_12h": -0.04980511331860915,
+        "soil_diff_24h": -0.02434306560245947
+      },
+      "sigma": 0.9178062088358419,
+      "n_train": 1642
+    },
+    "12": {
+      "intercept": -9.043939270657692,
+      "coef": {
+        "soil_now": 0.08140316412912925,
+        "soil_diff_1h": -0.29484063849291364,
+        "soil_diff_3h": -0.038912270273228924,
+        "soil_diff_6h": -0.0022985351295463276,
+        "soil_diff_12h": -0.06598696324010835,
+        "soil_diff_24h": -0.021359882372948235
+      },
+      "sigma": 0.9020919331444305,
+      "n_train": 1534
+    },
+    "24": {
+      "intercept": -16.138430227973835,
+      "coef": {
+        "soil_now": 0.1416480014909268,
+        "soil_diff_1h": -0.19958225366506874,
+        "soil_diff_3h": -0.31245454977731196,
+        "soil_diff_6h": -0.022244811141212857,
+        "soil_diff_12h": -0.0815980986275495,
+        "soil_diff_24h": -0.01763956898703263
+      },
+      "sigma": 1.1723118222902151,
+      "n_train": 1318
+    }
+  },
+  "metrics_12h": {
+    "evaluation": "walk-forward harian 4-12 Nov 2026",
+    "mae": 0.761,
+    "rmse": 0.945,
+    "r2": 0.869,
+    "baseline_mae": 1.171,
+    "n_test": 536
+  }
+}

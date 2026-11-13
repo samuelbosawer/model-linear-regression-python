@@ -1,0 +1,25 @@
+                      sistem  accuracy  precision  recall     f1   TP  FP  FN   TN
+0       Rule-based (Tugas 2)     0.930        1.0   0.639  0.780  101   0  57  656
+1  AI hybrid (Final Project)     0.947        1.0   0.728  0.842  115   0  43  656
+{
+  "test_points": 814,
+  "positives": 158,
+  "first_actual_below_55": "2026-11-05 05:30:00",
+  "first_rule_flag": "2026-11-05 05:30:00",
+  "first_ai_flag": "2026-11-05 03:20:00",
+  "raw_first_mulai_auto": "2026-11-05 02:30:36",
+  "lead_time_hours_vs_rule": 2.17,
+  "ai_alerts_7_12_nov": 0,
+  "rule_alerts_7_12_nov": 0,
+  "points_7_12_nov": 573,
+  "rule_based_5_6_nov": {
+    "auto_starts": 36,
+    "first_start": "2026-11-05 02:30:36",
+    "last_start": "2026-11-06 03:44:21",
+    "soil_at_first_start": 54,
+    "soil_at_last_start": 36,
+    "pump_seconds_total": 288
+  },
+  "sigma_12h": 0.9020919331444306,
+  "p_threshold": 0.7
+}
